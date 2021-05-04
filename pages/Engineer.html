@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineer</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/mainpage.css">
+    <link rel="stylesheet" href="../styles/Engineer.css">
+</head>
+<body>
+    <div class="navigation-wrap bg-light start-header start-style">
+		<div class="container">
+			<div class="form_rows">
+				<div class="col-12">
+					<nav class="navbar navbar-expand-md navbar-light">
+					
+						<a class="navbar-brand" href="https://front.codes/" target="_blank"><img src="https://assets.codepen.io/1462889/fcy.png" alt=""></a>	
+						
+						<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button> -->
+						
+						<!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav ml-auto py-4 py-md-0">
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#">Action</a>
+										<a class="dropdown-item" href="#">Another action</a>
+										<a class="dropdown-item" href="#">Something else here</a>
+										<a class="dropdown-item" href="#">Another action</a>
+									</div>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="#">Portfolio</a>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="#">Agency</a>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#">Action</a>
+										<a class="dropdown-item" href="#">Another action</a>
+										<a class="dropdown-item" href="#">Something else here</a>
+										<a class="dropdown-item" href="#">Another action</a>
+									</div>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="#">Journal</a>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="#">Contact</a>
+								</li>
+							</ul>
+						</div> -->
+					</nav>		
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="my-5 py-2">
+    </div>
+
+    <!-- --------------------------------button section ---------------------------- -->
+
+    <div class="button_space">
+        <div class="button_container" id="take">
+            <span class="button_text">Take Service</span>
+        </div>
+        <div class="button_container" id="give">
+            <span class="button_text">Give Service</span>
+        </div>
+    </div>
+
+    <!-- -----------------------------------form section ------------------------- -->
+    
+    <section class="get-in-touch">
+        <h1 class="title">Get in touch</h1>
+        <form class="contact-form form_rows">
+            <div class="first_two_entites">
+                <div class="form-field col x-50">
+                    <input id="name" class="input-text js-input" type="text" required>
+                    <label class="label" for="name">Name</label>
+                </div>
+                <div class="form-field col x-50">
+                    <input id="myform_phone" class="input-text js-input" type="text" required>
+                    <label class="label" for="phone">Phone Number</label>
+                    <div id="phone_error" class="error hidden">Please enter a valid phone number</div>
+                </div>
+            </div>
+            <div class="first_two_entites">
+                <div class="form-field col x-50">
+                    <input id="email" class="input-text js-input" type="email" required>
+                    <label class="label" for="email">E-mail</label>
+                </div>
+            </div>
+           <div class="form-field col x-100">
+              <input id="message" class="input-text js-input" type="text" required>
+              <label class="label" for="message">Enter Your Past Experience</label>
+           </div>
+           <div class="form-field col x-100 align-center button_container">
+              <input class="submit-btn button_text" type="submit" value="Submit">
+           </div>
+        </form>
+    </section>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+        $( '.js-input' ).keyup(function() {
+        if( $(this).val() ) {
+            $(this).addClass('not-empty');
+        } else {
+            $(this).removeClass('not-empty');
+        }
+        });
+    </script>
+    <script>
+        function validatePhoneNumber(input_str) {
+            var re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+
+            return re.test(input_str);
+        }
+
+        function validateForm(event) {
+            var phone = document.getElementById('myform_phone').value;
+            if (!validatePhoneNumber(phone)) {
+                document.getElementById('phone_error').classList.remove('hidden');
+            } else {
+                document.getElementById('phone_error').classList.add('hidden');
+                alert("validation success")
+            }
+            event.preventDefault();
+        }
+
+        document.getElementById('myform').addEventListener('submit', validateForm);
+    </script>
+</body>
+</html>
