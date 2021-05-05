@@ -18,10 +18,11 @@
 .button_text {
     color: white;
 }
+/* ----------------------------------------------------todo------------------------------ */
 .button_space {
-    display: flex;
+    /* display: flex; */
     justify-content: center;
-    margin-top: 10rem;
+    margin-top: 40vh;
     display: none;
 }
 @media (max-width: 410px){
@@ -81,13 +82,15 @@ body {
   min-height: 100%;
   position: relative;
 }
-
+/* -----------------------------------------------todo-------------------------------------------------------- */
 .get-in-touch {
   max-width: 650px;
   margin: 0 auto;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  display: none;
+  /* display: block; */
 }
 .get-in-touch .title {
   text-align: center;
@@ -174,5 +177,99 @@ div#phone_error {
 {
   display:none;
   color: red;
-    opacity: 0
+  opacity: 0
 }
+/* -----------------------------------------------todo----------------------------------------- */
+.extra_page{
+  display: none;
+  text-align: center;
+  margin-top: 40vh;
+}
+/* ---------------------------------------------get services------------------------------------ */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300);
+
+
+.take_service_section{
+  display: block;
+}
+table {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 600px;
+	
+	transition: all 0.2s ease;
+	
+	transform: translateX(-50%) translateY(-50%);
+	
+	background: #fff;
+	
+  padding: 20px;
+  border: 1px solid #888;
+}
+
+.take_name {
+	font-size: 30px;
+	border-bottom: 2px solid #888;
+  margin-bottom: 20px;
+  padding-top: 30px;
+}
+.take_name:first-letter {
+	font-size: 300%;
+}
+
+.label {
+	width: 70px;
+	font-weight: bold;
+}
+
+.label, .take_phone, .take_mobile, .take_email {
+	display: inline-block;
+}
+
+.details-td {
+	/* border-right: 1px solid #eee; */
+	white-space: nowrap;
+	
+	padding: 20px;
+	padding-right: 30px;
+}
+
+.description-td {
+	position: relative;
+	width: 100%;
+	padding: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+	text-align: justify;
+  margin-top: 15px;
+  border-right: 1px solid #888888;
+}
+	.description {
+		outline: 0px solid transparent;
+		border: 0px solid transparent;
+	}
+	.edit {
+		position: absolute;
+		top: 0px;
+		right: 0;
+		
+		width: 13px;
+		height: 13px;
+		
+		cursor: pointer;
+	}
+	.update {
+		display: none;
+		position: absolute;
+		right: 20px;
+		bottom: 0;
+		background: #c2e59c;
+		border: 0;
+		padding: 5px;
+		width: 80px;
+		color: #333;
+		outline: 0px solid transparent;
+		border: 0px solid transparent;
+	}
