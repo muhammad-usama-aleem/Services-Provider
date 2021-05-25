@@ -1,3 +1,8 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .button_container {
     display: flex; 
     justify-content: space-between;
@@ -20,15 +25,16 @@
 }
 /* ----------------------------------------------------todo------------------------------ */
 .button_space {
-    /* display: flex; */
+    display: flex;
     justify-content: center;
     margin-top: 40vh;
-    display: none;
+    /* display: none; */
 }
 @media (max-width: 410px){
     .button_space{
         display: grid;
     }
+
 }
 
 .bg-light {
@@ -134,6 +140,7 @@ body {
   color: #888;
   cursor: text;
   transition: transform 0.2s ease-in-out;
+  white-space: nowrap;
 }
 .contact-form .submit-btn {
   display: inline-block;
@@ -191,32 +198,85 @@ div#phone_error {
 
 
 .take_service_section{
-  display: block;
+  display: none;
 }
 table {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 600px;
-	
-	transition: all 0.2s ease;
-	
-	transform: translateX(-50%) translateY(-50%);
-	
-	background: #fff;
-	
-  padding: 20px;
-  border: 1px solid #888;
+    width: 80%;
+    min-width: 600px;
+    transition: all 0.1s ease;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #888;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+.title_name_sec {
+  display: flex;
+}
+p#hide_show, p#hide_rate {
+  margin-left: 10px;
+  margin-top: 6px;
+  font-size: medium;
+  color: hsl(264deg 54% 56%);
+  cursor: pointer;
+}
+.take_phone, .take_mobile, .take_email{
+  display: none;
+}
+.alias{
+  display: block;
+}
+tr.body_tr {
+  border-bottom: 1px solid #a0a0a0;
+}
+p.slide_text {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  /* margin-top: -35px; */
+  opacity: 0;
+}
+@media only screen and (max-width: 600px) {
+  tr.body_tr {
+    display: grid;
+  }
+  .details-td {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  table{
+    min-width: 500px;
+  }
 }
 
+@media only screen and (max-width: 510px) {
+  table{
+    min-width: 400px;
+  }
+}
 .take_name {
 	font-size: 30px;
+}
+.giver_name{
 	border-bottom: 2px solid #888;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
   margin-bottom: 20px;
   padding-top: 30px;
+  padding-left: 20px;
+  padding-bottom: 10px;
 }
-.take_name:first-letter {
-	font-size: 300%;
+.star_space {
+  display: flex;
+  font-size: 20px;
+}
+i.fas.fa-star {
+  margin-top: 12px;
+  margin-left: 9px;
+  
+  color: gold;
 }
 
 .label {
@@ -224,14 +284,13 @@ table {
 	font-weight: bold;
 }
 
-.label, .take_phone, .take_mobile, .take_email {
+.label {
 	display: inline-block;
 }
 
 .details-td {
 	/* border-right: 1px solid #eee; */
 	white-space: nowrap;
-	
 	padding: 20px;
 	padding-right: 30px;
 }
@@ -272,4 +331,72 @@ table {
 		color: #333;
 		outline: 0px solid transparent;
 		border: 0px solid transparent;
-	}
+  }
+  div#take_service_section {
+    margin-top: 6rem;
+ }
+
+/* ----------------------------rating-star-------------------------------- */
+
+
+
+.text-center {text-align:center;}
+
+.success-box {
+  margin:50px 0;
+  padding:10px 10px;
+  border:1px solid #eee;
+  background:#f9f9f9;
+}
+.success-box > div {
+  vertical-align:top;
+  display:inline-block;
+  color:#888;
+}
+/* Rating Star Widgets Style */
+.rating-stars ul {
+  list-style-type:none;
+  padding:0;
+  
+  -moz-user-select:none;
+  -webkit-user-select:none;
+}
+.rating-stars ul > li.star {
+  display:inline-block;
+  
+}
+/* Idle State of the stars */
+.rating-stars ul > li.star > i.fa {
+  font-size:2.5em; /* Change the size of the stars */
+  color:#ccc; /* Color on idle state */
+}
+/* Hover state of the stars */
+.rating-stars ul > li.star.hover > i.fa {
+  color:#FFCC36;
+}
+/* Selected state of the stars */
+.rating-stars ul > li.star.selected > i.fa {
+  color:#FF912C;
+}
+.rating_block {
+  background: white;
+  z-index: 100;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  display: grid;
+  margin-top: 1rem;
+  width: fit-content;
+  padding: 3rem;
+  border: 1px solid #888888;
+  border-radius: 20px;
+  box-shadow: 0px 0px 50px 32px rgb(0 0 0 / 20%);
+}
+p.close_button {
+  border: 1px solid #b7b7b7;
+  border-radius: 9px;
+  cursor: pointer;
+}

@@ -5,41 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site</title>
     <meta name="author" content="Muhammad Usama Aleem">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+	
+	<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="./styles/mainpage.css">
+    <link href="styles/main.css" rel="stylesheet" type="text/css" />
+    <link href="styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <link href="styles/select2.min.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/chatBot.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/timeline.css" rel="stylesheet" type="text/css"/>
+
 
 </head>
 <body>
-    <div class="navigation-wrap bg-light start-header start-style">
+    <div class="navigation-wrap start-header start-style">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
 					<nav class="navbar navbar-expand-md navbar-light">
 					
-						<a class="navbar-brand" href="https://front.codes/" target="_blank"><img src="https://assets.codepen.io/1462889/fcy.png" alt=""></a>	
-						
-						<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<a class="navbar-brand" href="#"> <h4 class="navbar_title_name">SERVICES</h4> </a>	
+
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"></span>
-						</button> -->
+						</button>
 						
-						<!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
 							<ul class="navbar-nav ml-auto py-4 py-md-0">
 								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
-									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-									<div class="dropdown-menu">
+									<a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+									<!-- <div class="dropdown-menu">
 										<a class="dropdown-item" href="#">Action</a>
 										<a class="dropdown-item" href="#">Another action</a>
 										<a class="dropdown-item" href="#">Something else here</a>
 										<a class="dropdown-item" href="#">Another action</a>
-									</div>
+									</div> -->
 								</li>
 								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link" href="#">Portfolio</a>
+									<a class="nav-link" href="./pages/mainpage/about/about.html">About Us</a>
 								</li>
 								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link" href="#">Agency</a>
+									<a class="nav-link" href="./pages/mainpage/contact/contact.html">Contact</a>
 								</li>
-								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+								<!-- <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
 									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
 									<div class="dropdown-menu">
 										<a class="dropdown-item" href="#">Action</a>
@@ -53,9 +62,9 @@
 								</li>
 								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
 									<a class="nav-link" href="#">Contact</a>
-								</li>
+								</li> -->
 							</ul>
-						</div> -->
+						</div>
 					</nav>		
 				</div>
 			</div>
@@ -74,7 +83,48 @@
     <div id="root" class="card_place row"></div>
 
 
+	<div class="chat-screen">
+		<div class="chat-header">
+			<div class="chat-header-title">
+				Let’s chat? - We're online
+			</div>
+		</div>
+		
+		<div class="chat-body" id="chat_body">
+			<div class="row">
+				<div class="col-md-12 text-center mb-2">
+					<p>Hi 👋! If you have any thing you want to ask about website, then feel free to ask me.</p>
+				</div>
+			</div>
+			<!-- <div class="chat-bubble you">Welcome to our site, if you need help simply reply to this message, we are online and ready to help.</div>
+			<div class="chat-bubble me">Hi, I am back</div>
+			<div class="chat-bubble me">I just want my Report Status.</div>
+			<div class="chat-bubble you">As i am not getting any weekly reports nowadays.</div>
+			<div class="chat-bubble me">Hi, I am back</div>
+			<div class="chat-bubble me">I just want my Report Status.</div>
+			<div class="chat-bubble you">As i am not getting any weekly reports nowadays.</div>
+			<div class="chat-bubble me">Hi, I am back</div>
+			<div class="chat-bubble me">I just want my Report Status.</div>
+			<div class="chat-bubble you">As i am not getting any weekly reports nowadays.</div>
+			<div class="chat-bubble me">Hi, I am back</div>
+			<div class="chat-bubble me">I just want my Report Status.</div>
+			<div class="chat-bubble you">As i am not getting any weekly reports nowadays.</div> -->
 
+		</div>
+	
+		<div class="chat-input">
+			<input type="text" id="chat_in" placeholder="Type a message...">
+			<div class="input-action-icon">
+				<a><svg xmlns="http://www.w3.org/2000/svg" onclick="chat_out('chat_in')" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a>
+			</div>
+		</div>
+	
+	</div>
+	<div class="chat-bot-icon">
+		<!-- <img src="img/we-are-here.svg"/> -->
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square animate"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x "><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+	</div>
 
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -83,22 +133,75 @@
 
     <script>
     // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    var firebaseConfig = {
-        apiKey: "AIzaSyC5yVEBT3YnCn_SddoLuoGPqgOLSNclp98",
-        authDomain: "testing-fiverr-e5d0c.firebaseapp.com",
-        projectId: "testing-fiverr-e5d0c",
-        storageBucket: "testing-fiverr-e5d0c.appspot.com",
-        messagingSenderId: "598461525826",
-        appId: "1:598461525826:web:1ba234d1bebaafbd8662db",
-        measurementId: "G-043XM906WL"
-    };
+	// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+	const firebaseConfig = {
+	apiKey: "AIzaSyBb-lZyUWsPyJxI1lgvf5uDD6VJOebK44k",
+	authDomain: "services-7d3d2.firebaseapp.com",
+	databaseURL: "https://services-7d3d2-default-rtdb.firebaseio.com",
+	projectId: "services-7d3d2",
+	storageBucket: "services-7d3d2.appspot.com",
+	messagingSenderId: "217283936709",
+	appId: "1:217283936709:web:70ef97311d516a6b664bac",
+	measurementId: "G-NYYT8PESRM"
+	};
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
-    </script>
-    <script src="./scripts/mainscript.js"></script>
+	</script>
+
+	<script src="./scripts/mutual.js"></script>
+	<script src="./scripts/mainscript.js"></script>
+	
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+	<script type="257be86a981729866f2fa61c-text/javascript">
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	
+		ga('create', 'UA-83834093-1', 'auto');
+		ga('send', 'pageview');
+	
+	</script>
+	<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="257be86a981729866f2fa61c-|49" defer=""></script>
+	<!-- Time line Html Ends -->
+	<!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+	<script src="scripts/chatbot/jquery-3.1.1.min.js"></script>
+	<script src="scripts/chatbot/popper.min.js"></script>
+	<script src="scripts/chatbot/bootstrap.min.js"></script>
+	<script src="scripts/chatbot/select2.min.js"></script>
+	 <script>
+			$(document).ready(function(){
+				$(".select2_el").select2({
+				});
+			});
+			</script>
+	<script>
+		$(document).ready(function () {
+			//Toggle fullscreen
+			$(".chat-bot-icon").click(function (e) {
+				$(this).children('img').toggleClass('hide');
+				$(this).children('svg').toggleClass('animate');
+				$('.chat-screen').toggleClass('show-chat');
+			});
+			$('.chat-mail button').click(function () {
+				$('.chat-mail').addClass('hide');
+				$('.chat-body').removeClass('hide');
+				$('.chat-input').removeClass('hide');
+				$('.chat-header-option').removeClass('hide');
+			});
+			$('.end-chat').click(function () {
+				$('.chat-body').addClass('hide');
+				$('.chat-input').addClass('hide');
+				$('.chat-session-end').removeClass('hide');
+				$('.chat-header-option').addClass('hide');
+			});
+		});
+	
+	</script>
+
 </body>
 </html>
