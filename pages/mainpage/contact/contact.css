@@ -1,0 +1,21 @@
+.contact_body {
+    display: grid;
+    justify-content: center;
+    padding: 5rem;
+}
+h1.contact_header {
+    text-transform: uppercase;
+    font-size: xxx-large;
+    margin-top: 9rem;
+    border-bottom: 1px solid #e65100c2;
+}
+.contact_det {
+    font-family: system-ui;
+}
+.contact1 {
+    display: flex;
+    justify-content: space-between;
+}
+p.email_address {
+    font-style: oblique;
+}

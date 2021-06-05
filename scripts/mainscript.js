@@ -12,7 +12,7 @@ rootref.on("child_added", snap =>{
         var refer = firebase.database().ref(name);
         let snapshot = await refer.once("value")
         let chi_dren = snapshot.numChildren()
-        return chi_dren
+        return chi_dren;
     }
 
     const render = async () =>{
@@ -38,7 +38,6 @@ rootref.on("child_added", snap =>{
             `;
 
             root.appendChild(div);
-        // }
     }
 
 

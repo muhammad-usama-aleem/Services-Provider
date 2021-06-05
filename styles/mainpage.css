@@ -408,7 +408,7 @@ body.dark .logo img {
     margin: 0rem 3rem;
 }
 .row {
-    display: flex;
+    display: flex !important;
     flex-wrap: wrap;
     margin: 0em 0 1em 0;
     padding: 1em 20px 0 20px;
@@ -588,7 +588,8 @@ body.dark .logo img {
     line-height: 1em;
     font-size: 1.2rem;
     font-weight: bolder;
-    white-space: nowrap;
+    /* white-space: nowrap; */
+    text-transform: capitalize
 }
 a {
     color: rgb(0, 0, 0);

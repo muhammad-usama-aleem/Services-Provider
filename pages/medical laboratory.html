@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>medical laboratory</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+    <link rel="stylesheet" href="../styles/mainpage.css">
+    <link rel="stylesheet" href="../styles/Engineer.css">
+</head>
+<body>
+    <div class="navigation-wrap start-header start-style">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<nav class="navbar navbar-expand-md navbar-light">
+					
+						<a class="navbar-brand" href="../index.html"> <h4 class="navbar_title_name">SERVICES</h4> </a>	
+
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav ml-auto py-4 py-md-0">
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+									<a class="nav-link" href="../index.html" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+									
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href='./mainpage/about/about.html'>About Us</a>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="./mainpage/contact/contact.html">Contact</a>
+								</li>
+								
+							</ul>
+						</div>
+					</nav>		
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="my-5 py-5">
+    </div>
+
+    <!-- --------------------------------button section ---------------------------- -->
+
+    <div class="button_space" id="button_space">
+        <div class="button_container" onclick="take()" id="take">
+            <span class="button_text">Take Service</span>
+        </div>
+        <div class="button_container" onclick="give()" id="give">
+            <span class="button_text">Give Service</span>
+        </div>
+    </div>
+
+    <!-- -----------------------------------form section ------------------------- -->
+    
+    <section id="register" class="get-in-touch" >
+        <h1 class="title">Register yourself</h1>
+        <form class="contact-form form_rows" onsubmit="submitform(event)">
+            <div class="first_two_entites">
+                <div class="form-field col x-50">
+                    <input id="name" class="input-text js-input" type="text" required>
+                    <label class="label" for="name">Name</label>
+                </div>
+                <div class="form-field col x-50">
+                    <input id="phone" class="input-text js-input" type="text" required>
+                    <label class="label" for="text">Phone Number</label>
+                    <div id="phone_error" class="error hidden">Please enter a valid phone number</div>
+                </div>
+            </div>
+            <div class="first_two_entites">
+                <div class="form-field col x-50">
+                    <input id="email" class="input-text js-input" type="email" required>
+                    <label class="label" for="email">E-mail</label>
+                </div>
+            </div>
+           <div class="form-field col x-100">
+              <input id="message" class="input-text js-input" type="text" required>
+              <label class="label" for="message">Enter Your Past Experience</label>
+           </div>
+
+           <div class="fileUploadInput">
+               <label>Upload File</label>
+               <input id="upload_img" type="file"/>
+               <button>+</button>
+           </div>
+
+           <div class="form-field col x-100 align-center button_container">
+              <input class="submit-btn button_text" id="submit" type="submit" value="Submit">
+           </div>
+        </form>
+    </section>
+
+    <div class="main_center extra_page" id="success">
+        <h3 class="main_text">
+            Your Response has been submitted successfully
+        </h3>
+    </div>
+ 
+    <!-- -------------------------------------take service section------------------------ -->
+
+    <div id="take_service_section" class="take_service_section">
+        
+    </div>
+
+    <div class="extra_big" id='extra_big' style="display: none;">
+        <h3 class="extra_card">
+            Recommended categories
+        </h3>
+        <div class="card_place row" id="siblings">
+
+        </div>
+    </div>
+
+
+
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase.js"></script>
+     <script>
+     // Your web app's Firebase configuration
+     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+     const firebaseConfig = {
+        apiKey: "AIzaSyBb-lZyUWsPyJxI1lgvf5uDD6VJOebK44k",
+        authDomain: "services-7d3d2.firebaseapp.com",
+        databaseURL: "https://services-7d3d2-default-rtdb.firebaseio.com",
+        projectId: "services-7d3d2",
+        storageBucket: "services-7d3d2.appspot.com",
+        messagingSenderId: "217283936709",
+        appId: "1:217283936709:web:70ef97311d516a6b664bac",
+        measurementId: "G-NYYT8PESRM"
+    };
+     // Initialize Firebase
+     firebase.initializeApp(firebaseConfig);
+     firebase.analytics();
+     </script>
+
+    <!-- ----------------------------- extra edition for stars ------------------------------------ -->
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+    <script src="../scripts/mutual.js"></script>
+    <script src="../scripts/medical laboratory.js"></script>
+</body>
+</html>

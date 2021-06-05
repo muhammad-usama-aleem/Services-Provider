@@ -1,6 +1,7 @@
 var button_space = document.getElementById("button_space");
 var register = document.getElementById("register");
 var take_service_section = document.getElementById('take_service_section');
+var extra_big = document.getElementById('extra_big');
 var chat_body = document.getElementById('chat_body');
 
 const give = () =>{
@@ -10,6 +11,7 @@ const give = () =>{
 const take = () =>{
     button_space.style.display = "none";
     take_service_section.style.display ="block";
+    extra_big.style.display ="block";
 }
 
 
